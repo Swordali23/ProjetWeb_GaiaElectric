@@ -3,7 +3,7 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
-<div class="container-fluid ">
+<div class="container-fluid">
   <div class="row bg-secondary text-center text-lg-start">
     <div class="col-lg-6 col-md-12 my-4 text-center">
       <h5 class="text-uppercase">About Us</h5>
@@ -43,7 +43,7 @@
       <div class="copyright d-flex flex-row justify-content-center">
           <p class="text-secondary">© 2021 Copyright :</p>
           &ensp;
-          <a class="text-secondary" href="index.php">FootX Store</a>
+          <a class="text-secondary" href="index.php">Gaïa Electric</a>
         </div>
   </div>
 </div>
