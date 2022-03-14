@@ -1,0 +1,16 @@
+#avatar,#side{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Items*/
+#myItem{
+	max-width: 100%;
+	height: auto;
+}
+#myItem1{
+	max-width: 25%;
+	height: auto;
+}

@@ -1,0 +1,61 @@
+.wrapper{
+  width: 100%;
+  padding: 10px;
+}
+
+.container{
+  max-width: 500px;
+  height: auto;
+  margin: 0px auto;
+}
+
+.title{
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.input-form .label{
+	  display: block;
+}
+
+.input-form .items{
+  margin-bottom: 20px;
+}
+
+.sectiona.items .input,
+.sectionb.items .input,
+.sectionc.items .input{
+    background: transparent;
+    border: 2px solid;
+    width: 100%;
+    padding: 10px;
+}
+
+.input-form .section-3{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cvc{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cvc .cvc-img{
+  position: absolute;
+  top: -300%;
+  right: 0;
+  background: #5f6c7d;
+  padding: 12px;
+  border-radius: 5px;
+  display: none;
+}
+
+.cvc .cvc-img img{
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
