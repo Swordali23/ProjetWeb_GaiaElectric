@@ -5,7 +5,7 @@
 <!--include this file at the beginning of all CONTROLLER PAGES-->*/
   $db_host = "localhost";
   $db_user = "root";
-  $db_password = "";
+  $db_password = "root";
   $db_db = "WebProject";
   $db_port = 8889;
 
