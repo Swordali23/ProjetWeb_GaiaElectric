@@ -1,21 +1,18 @@
 <?php
 include_once ('databaseConn.php');
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 ?>
 
 
 <?php 
-$cardType = $_POST["cardType"];
 $cardNumber = $_POST["cardNumber"];
 $cardHolder = $_POST["cardHolder"];
 $cvc = $_POST["cvc"];
 $date = $_POST["date"];
 $idBuyer = $_SESSION['idBuyer'];
-
-$visa = $_POST["visa"];
-$paypal = $_POST["paypal"];
-$MasterCard = $_POST["MasterCard"];
-$AmericanExpress = $_POST["AmericanExpress"];
 
 
   if (empty($cardNumber)){
@@ -44,7 +41,7 @@ $sql0 = "SELECT * FROM card WHERE idBuyer='$idBuyer';";
 $query0 = mysqli_query($mysqli, $sql0);
 $resultCheck = mysqli_num_rows($query0);
 if($resultCheck > 0){
-    if($cardNumber!=$row['cardNumber'] && $cardType!=$row['cardType'] && $cardHolder!=$row['cardName'] && $date!=$row['cardExpiration'] && $cvs!=$row['cardCode']){
+    if($cardNumber!=$row['cardNumber'] && $cardHolder!=$row['cardName'] && $date!=$row['cardExpiration'] && $cvs!=$row['cardCode']){
     $cardErr="This card doesn't exist !";
     require_once "checkOutPage.php";
     exit();

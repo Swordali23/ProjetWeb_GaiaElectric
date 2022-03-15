@@ -4,7 +4,10 @@
 
 <?php
 include_once ('databaseConn.php');
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 ?>
 
 

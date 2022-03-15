@@ -3,7 +3,10 @@
 
 <?php
 include_once ('databaseConn.php');  //get the connection
-session_start();    //start of a session
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }   //start of a session
 ?>
 
 

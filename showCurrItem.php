@@ -3,7 +3,10 @@
 
 <?php
 include_once ('databaseConn.php');
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 ?>
 
 
@@ -65,9 +68,4 @@ session_start();
     else{
         $_SESSION["currItemPhoto3"]="non";
     }
-    if($_SESSION["durationCurrItem"]==NULL){
         require_once 'itemBuyer.php';
-    }
-    else{
-        require_once 'itemBuyer2.php';
-    }

@@ -1,15 +1,19 @@
 
 <?php
 include_once ('databaseConn.php');
-session_start();
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
-$amountToPay = $_GET['uid'];
-$_SESSION['amountToPay']=$amountToPay;
+//$amountToPay = $_GET['uid'];
+//$_SESSION['amountToPay']=$amountToPay;
+$_SESSION['amountToPay']=$_GET['uid'];
 ?>
 
 <head>
 <meta charset="UTF-8">
-    <title>FootX : Payment page</title>
+    <title>Gaïa Electric : Payment page</title>
     <link rel="icon" href="public/images/logoWebsite.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +31,7 @@ $_SESSION['amountToPay']=$amountToPay;
 <form action="payement.php" method="post">
 <div class="wrapper">
   <div class="container">
-    <div class="title">Checkout Page <?php echo $amountTransa ?></div>
+    <div class="title">Checkout Page</div>
     
     <div class="input-form">
       <div class="sectiona">
