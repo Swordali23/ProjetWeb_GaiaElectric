@@ -6,9 +6,8 @@ if(!isset($_SESSION))
         session_start(); 
     }
 
-//$amountToPay = $_GET['uid'];
-//$_SESSION['amountToPay']=$amountToPay;
-$_SESSION['amountToPay']=$_GET['uid'];
+$amountToPay = $_GET['uid'];
+$_SESSION['amountToPay']=$amountToPay;
 ?>
 
 <head>
@@ -31,7 +30,7 @@ $_SESSION['amountToPay']=$_GET['uid'];
 <form action="payement.php" method="post">
 <div class="wrapper">
   <div class="container">
-    <div class="title">Checkout Page</div>
+    <div class="title">Checkout</div>
     
     <div class="input-form">
       <div class="sectiona">
