@@ -12,7 +12,7 @@ if(!isset($_SESSION))
 <?php
 
 $userSeller=$_SESSION["userSeller"];
-$userAdmin=$_SESSION["userAdmin"];
+//$userAdmin=$_SESSION["userAdmin"];
 
 $username= $_POST['username'];
 $email=$_POST['email'];
