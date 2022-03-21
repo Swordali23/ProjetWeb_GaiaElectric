@@ -7,6 +7,13 @@ include_once 'headerBuyer.php';
 include_once ('databaseConn.php');
 
 ?>
+<style>
+.btn-lg {
+    padding-left: 65px;
+    padding-right: 65px;
+    font-size: 16px;
+}
+</style>
   <div class="container">
     <div class="row text-lg-start d-flex justify-content-center">
       <?php
@@ -23,7 +30,7 @@ include_once ('databaseConn.php');
       
       $idSeller = $row['idSeller'];
       $idBuyer = $_SESSION["idBuyer"];
-        if($idBuyer==null){
+        /*if($idBuyer==null){
         $idBuyer=0;     // Pour que l'affichage du decompte ne bug pas quand personne n'est connecter
                       // avant un bid on test si idBuyer==0, si oui on annule la transa et on demande 
                       // a l'utilisateur de se connecter 
@@ -74,9 +81,24 @@ include_once ('databaseConn.php');
               <p class="h5 mx-2 py-2"><?php if($_SESSION["currItemCategory"]=='1'){echo 'Monocristallin';}elseif($_SESSION["currItemCategory"]=='2'){echo 'Polycristallin';} ?></p>
               <p class="card-text text-secondary h6 mx-2 py-2"><?php echo $_SESSION["currItemDescription"]; ?></p>
               <div class="dropdown-divider"></div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-success w-50 " name="addCart" onclick=addToCart(this.id) id="<?php echo $_SESSION["currItemId"];?>">Add to cart</button>
-              </div>
+              <?php
+              if(isset($_SESSION["userBuyer"])){
+                echo '<div class="d-flex justify-content-center">';
+                echo '<button type="submit" class="btn btn-success w-50 " name="addCart" onclick=addToCart(this.id) id="';
+                echo $_SESSION["currItemId"];
+                echo '">';
+                echo 'Add to Cart';
+                echo '</button>';
+                echo '</div>';
+              }
+              else{
+                echo '<div class="d-flex justify-content-center">';
+                echo '<a class="btn btn-success text-light btn-lg" role="button" href="loginBuyer.php">';
+                echo 'Add to Cart';
+                echo '</a>';
+                echo '</div>';
+              }
+              ?>
 
               <br><br>
               <p class="card-text text-info mx-2 py-2">Sold by <?php echo $_SESSION["sellerUsernameCurrItem"]; ?></p>
